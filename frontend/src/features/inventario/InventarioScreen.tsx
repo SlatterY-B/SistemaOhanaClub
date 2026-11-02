@@ -487,7 +487,11 @@ export const InventarioScreen: React.FC<InventarioScreenProps> = ({ onNewReserva
                 productos.map((prod) => {
                   const isStockBajo = prod.estado === 'Stock Bajo' || prod.stockActual <= (prod.stockMinimo || 10);
                   return (
-                    <tr key={prod.id} className="hover:bg-blue-50/40 transition">
+                    <tr key={prod.id} className={`transition ${
+                              isStockBajo
+                                ? 'bg-rose-50 hover:bg-rose-100'
+                                : 'hover:bg-blue-50/40'
+                            }`}>
                       <td className="py-3 px-5 flex items-center gap-3">
                         <div className="w-10 h-10 rounded-lg bg-slate-50 border border-slate-100 flex items-center justify-center shrink-0 overflow-hidden">
                           <img
