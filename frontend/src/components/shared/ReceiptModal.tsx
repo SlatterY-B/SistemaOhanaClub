@@ -237,7 +237,7 @@ export const ReceiptModal: React.FC<ReceiptModalProps> = ({
             className="flex-1 bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl flex items-center justify-center gap-2 shadow-md transition active:scale-95 text-xs"
           >
             <Share2 className="w-4 h-4" />
-            Compartir por WhatsApp
+            Compartir constancia por WhatsApp
           </button>
           <button
             onClick={onClose}
