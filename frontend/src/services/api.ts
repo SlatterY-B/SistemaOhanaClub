@@ -524,7 +524,11 @@ export const apiService = {
     }
     if (search) {
       const s = search.toLowerCase();
-      prods = prods.filter(p => p.nombre.toLowerCase().includes(s));
+       prods = prods.filter(p =>
+    p.nombre.toLowerCase().includes(s) ||
+    p.categoriaId.toLowerCase().includes(s) ||
+    (p.presentacion || '').toLowerCase().includes(s)
+     );
     }
     return prods.map(p => ({
       ...p,
