@@ -318,12 +318,12 @@ const exportarExcel = () => {
             </div>
 
             {/* Card 3: Resumen Mensual (Gráfico de Barras según Figma) */}
-            <div className="border border-[#2563EB] rounded-2xl p-3.5 bg-white shadow-xs mb-3">
+            <div className="border border-[#2563EB] rounded-2xl p-4 bg-white shadow-sm mb-4 overflow-x-auto">
               <h3 className="text-xs font-bold text-[#2563EB] mb-3">
                 Resumen mensual
               </h3>
 
-              <div className="flex items-end justify-between h-24 gap-2 px-1 pb-1 border-b border-slate-100">
+              <div className="flex items-end justify-between min-w-[320px] h-28 gap-3 px-2 pb-2 border-b border-slate-100">
                 {chartWeeks.map((week, idx) => (
                   <div key={idx} className="flex flex-col items-center flex-1 h-full justify-end">
                     <div className="flex items-end gap-1 w-full justify-center h-full">
